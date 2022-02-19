@@ -5,35 +5,80 @@ description: Installation
 
 # Installation
 
-> **Requirements:** [PHP 7.3+](https://php.net/releases/).
+**Requirements:**
 
-1. First, install Pest via the [Composer](https://getcomposer.org) package manager:
+-  [PHP 7.3+](https://php.net/releases/).
+-  [Composer](https://getcomposer.org/).
+-  (optional) see [compatibility →](/docs/compatibility)
+
+## Installation
+
+The installation process consists of 3 steps to be performed in your command line.
+
+<br/>
+
+``Step 1:`` Require Pest as a dev dependency in your project. Run the following command:
 
 ```bash
 composer require pestphp/pest --dev --with-all-dependencies
 ```
 
-2. **On Laravel**, require the `pest-plugin-laravel` and run the `pest:install` _Artisan_ command:
+<hr/>
 
-```bash
-composer require pestphp/pest-plugin-laravel --dev
-php artisan pest:install
-```
+`Step 2:` What project do you have?  Choose and click below to continue with the installation:
 
-3. **On other projects**, create a `tests` folder and run the `pest --init` command:
+<details>
+  <summary><em>Laravel Framework</em></summary>
+    
+  Pest has a dedicated [Laravel Plugin](/docs/plugins/laravel) which gives you direct access to Laravel's testing API in your test files.
 
-```bash
-./vendor/bin/pest --init
-```
+  2.1. Require the Laravel Plugin via Composer, running the following command:
 
-4. Finally, you can run Pest directly from the command line:
+  ```bash
+  composer require pestphp/pest-plugin-laravel --dev
+  ```
+
+  2.2. Install Pest using Artisan, run the following command:
+
+  ```bash
+  php artisan pest:install
+  ```
+
+  Pest has now configured its [Files & Folders](/docs/files-and-folders) structure, and it’s ready to be used.
+
+  <br/>
+
+</details>
+
+<details>
+  <summary><em>PHP Project (PHP Frameworks)</em></summary>
+
+  2.1. Initialize and setup Pest. Run the following command:
+
+  ```bash
+  ./vendor/bin/pest --init
+  ```
+
+  Pest has now configured its [Files & Folders](/docs/files-and-folders) structure, and it’s ready to be used.
+
+</details>
+
+<hr/>
+
+`Step 3:` Pest is a command line tool. To run your tests, execute the command:
 
 ```bash
 ./vendor/bin/pest
 ```
 
+<br/>
+
+The image below shows the default Test Report in a brand-new project.
+
+Now, click here let's see the syntax of a [`Pest Test` →](/docs/pest-tests)
+
 ![Install](/assets/img/pestinstall.png)
 
 ---
 
-In the next section, we are going to learn how to write tests with Pest: [Writing Tests →](/docs/writing-tests)
+**Next**: Let's see the syntax of a [`Pest Test` →](/docs/pest-tests)
