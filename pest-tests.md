@@ -14,8 +14,6 @@ description: Pest test files
 
 Pest test files are clean and simple and easy to read. There is no need for classes and no boilerplate code.
 
-Tests are organized in files, and each test file can be referred to as a `Test Case`.
-
 You can read more about [Files & Folders](http://pestphp.com/) in Pest.
 
 <a name="pest-syntax"></a>
@@ -23,9 +21,9 @@ You can read more about [Files & Folders](http://pestphp.com/) in Pest.
 
 Pest offers you two functions to write tests with: `test()` and `it()`.
 
-You can use them as you prefer, the two functions shares the same usage:
+You can use them as you prefer, the two functions are used in the same way:
 
-- They require two arguments: The first is the test description, and the second is a `closure` containing the test code.
+- They require two parameters: The first is the test description. The second is a `closure` containing the test code.
 - Both can handle [Assertions](/docs/assertions) and [Expectations](/docs/expectations) to perform checks.
 
 Example of a test written syntax Pest API:
