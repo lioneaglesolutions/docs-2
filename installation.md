@@ -53,7 +53,9 @@ composer require pestphp/pest --dev --with-all-dependencies
 <details>
   <summary><em>PHP Project (PHP Frameworks)</em></summary>
 
-  2.1. Initialize and setup Pest. Run the following command:
+  2.1. Create a folder `tests` in your project root directory.
+  
+  2.2. Initialize and setup Pest. Run the following command:
 
   ```bash
   ./vendor/bin/pest --init
