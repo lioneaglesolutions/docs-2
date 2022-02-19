@@ -9,7 +9,8 @@ description: Installation
 
 -  [PHP 7.3+](https://php.net/releases/).
 -  [Composer](https://getcomposer.org/).
--  (optional) see [compatibility →](/docs/compatibility)
+
+For questions about installing Pest in a project with existing tests, see [Compatibility](/docs/compatibility).
 
 ## Installation
 
