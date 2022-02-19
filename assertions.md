@@ -11,19 +11,20 @@ description: Assertions
 <a name="overview"></a>
 ## Overview
 
-By now you've caught a glimpse of some available assertions. They
-are the ones that actually perform the checks to ensure that things
-are going as planned.
+In addition to [Expectations](/docs/expectations), Pest also provide full access to the PHPUnit built-in Assertions.
 
-Remember, the `$this` variable inside the given
-closure in tests is always bound to a Test Case class. Therefore
-assertions are methods of the `$this` variable.
+Assertions are the methods which are actually performing the checks to ensure that your code behave as intended.
 
 ```php
-it('asserts true is true', function () {
+it('asserts that TRUE is TRUE', function () {
     $this->assertTrue(true);
 });
 ```
+
+It's  important to remember that `Assertions` are methods of the `$this` variable.
+
+This is because the closure in `test()` and `it()`  functions is always bound to a `Test Case` class.
+
 
 <a name="available-assertions"></a>
 ## Available Assertions
@@ -39,7 +40,7 @@ it('asserts true is true', function () {
 
 </div>
 
-For the full list of **assertions**, please refer to [PHPUnit Assertions](https://phpunit.readthedocs.io/en/9.5/assertions.html) documentation.
+For the full list of **Assertions**, please refer to [PHPUnit Assertions](https://phpunit.readthedocs.io/en/9.5/assertions.html) documentation.
 
 <a name="assertTrue"></a>
 ### `assertTrue()`
@@ -76,9 +77,9 @@ $this->assertCount(4, $array);
 The `assertEquals` asserts the given values are equal.
 
 ```php
-$array = [1, 2, 3, 4];
+$array = ['Nuno', 'Luke', 'Alex', 'Dan'];
 
-$this->assertEquals([1, 2, 3, 4], $array);
+$this->assertEquals(['Nuno', 'Luke', 'Alex', 'Dan'], $array);
 ```
 
 <a name="assertEmpty"></a>
@@ -98,9 +99,9 @@ $this->assertEmpty($array);
 The `assertStringContainsString` asserts the given string exists.
 
 ```php
-$this->assertStringContainsString('Star', 'Star Wars');
+    $this->assertStringContainsString('Hello', 'Hello World');
 ```
 
 ---
 
-Next section: [Expectations →](/docs/expectations)
+Next section: [Run a single test →](/docs/run-a-single-test)
