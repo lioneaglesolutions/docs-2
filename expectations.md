@@ -43,9 +43,9 @@ test('user is verified and over 18', function () {
     $user = ['name' => 'Nuno', 'age' => 21, 'is_verified' => true];
 
     // Test
-    expect($user)
-        ->is_verified->toBeTrue()
-        ->age->ToBeGreaterThan(18);
+    expect($user['is_verified'])->toBeTrue();
+
+    expect($user['age'])->ToBeGreaterThan(18);
 });
 ```
 
