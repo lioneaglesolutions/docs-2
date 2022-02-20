@@ -1,9 +1,10 @@
 ---
-title: Groups Of Tests
-description: Groups Of Tests
+title: Grouping Tests
+description: Grouping Tests
+
 ---
 
-# Groups Of Tests
+# Grouping Tests
 
 - [Overview](#overview)
 
@@ -53,4 +54,4 @@ Pest will understand it.
 
 ---
 
-Next section: [Skipping Tests →](/docs/skipping-tests)
+*Next:*[Skipping Tests →](/docs/skipping-tests)
