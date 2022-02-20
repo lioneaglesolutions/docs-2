@@ -33,11 +33,11 @@ Example of a test written syntax Pest API:
 
 test('TRUE is TRUE', function () {
     $this->assertTrue(true);   // assertion
-    expect(true)->toBeTrue()   // expectation
+    expect(true)->toBeTrue();  // expectation
 });
 ```
 
-The function `it()` prepends the word *"it"* to your test name.
+The function `it()` prepends the word *"it"* to your test description.
 
 In other words, for the example below, the test report will show: `it checks that TRUE is TRUE`.
 
@@ -46,7 +46,7 @@ In other words, for the example below, the test report will show: `it checks tha
 
 it('checks that TRUE is TRUE', function () {
     $this->assertTrue(true);   // assertion
-    expect(true)->toBeTrue()   // expectation
+    expect(true)->toBeTrue();   // expectation
 });
 ```
 
