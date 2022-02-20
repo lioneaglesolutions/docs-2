@@ -51,18 +51,6 @@ it('works with higher order testing')
     ->skip();
 ```
 
-<a name="running-single-test"></a>
-## Running a single test
-
-If you’d like to run a single test to debug a problem, just use the following syntax:
-
-```php
-it('has home', function () {
-    // ..
-})->only();
-```
-
-> Please be aware that `->only()` requires all tests to be written with Pest test functions to work correctly. Furthermore, it will be ignored if the `--ci` option is added to the cli command
 
 <a name="incomplete-tests"></a>
 ## Incomplete tests
