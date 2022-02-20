@@ -32,11 +32,11 @@ test('true is true', function () {
 Pest will properly delegate to any given method and its arguments of the test itself.
 
 Sometimes, you'll need to access methods not available until runtime. Higher order tests provide
-the `tap` method, which receives a closure and executes the code inside:
+the `defer` method, which receives a closure and executes the code inside:
 
 ```php
 it('writes to the database after the command is run')
-    ->tap(fn() => $this->artisan('your-command'))
+    ->defer(fn() => $this->artisan('your-command'))
     ->assertDatabaseHas('users', ['id' => 1]);
 ```
 
@@ -74,7 +74,7 @@ test('the user has the correct values')
 ## Working with Datasets
 
 When working with [datasets](/docs/datasets), Pest allows you to access the dataset values in higher order
-tests when using the `expect`, `and` or `tap` methods:
+tests when using the `expect`, `and` or `defer` methods:
 
 ```php
 it('validates the user names')
@@ -84,7 +84,7 @@ it('validates the user names')
 
 it('inserts a user in the database')
     ->with('users')
-    ->tap(fn($name, $email) => User::create(['name' => $name, 'email' => $email])) // You may receive multiple arguments
+    ->defer(fn($name, $email) => User::create(['name' => $name, 'email' => $email])) // You may receive multiple arguments
     ->assertDatabaseHas('users', 1);
 ```
 
