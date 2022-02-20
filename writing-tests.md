@@ -5,7 +5,7 @@ description: Writing Tests
 # Writing Tests
 
 - [Create a Test](#create-a-test)
-- [Understating the Test](#understating-the-test)
+- [Understanding the Test](#understanding-the-test)
 
 <a name="create-a-test"></a>
 ## Create a Test
@@ -18,8 +18,8 @@ php artisan make:test HomePageTest --pest
 
 Artisan will create a file called `HomePageTest.php` inside your `tests/Feature/` folder.
 
-<a name="understating-the-test"></a>
-## Understating the Test
+<a name="understanding-the-test"></a>
+## Understanding the Test
 
 
 ```php
