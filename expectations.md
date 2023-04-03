@@ -270,7 +270,7 @@ In addition, you can verify the actual value of a property by providing a second
 ```php
 expect($user)->toHaveProperty('name');
 expect($user)->toHaveProperty('name', 'Nuno');
-expect($user)->toHaveProperty('is_active', 'true');
+expect($user)->toHaveProperty('is_active', true);
 ```
 
 <a name="expect-toHaveProperties"></a>
@@ -278,8 +278,16 @@ expect($user)->toHaveProperty('is_active', 'true');
 
 This expectation ensures that `$value` has property names matching all the names contained in `$names`.
 
+In addition, you can verify the actual value of each property by providing an associative array with property name and property value.
+
 ```php
-expect($user)->toHaveProperties(['name', 'email']);
+expect($user)->toHaveProperties(['id', 'name', 'is_active']);
+
+expect($user)->toHaveProperties([
+    'id' => 1,
+    'name' => 'Lucas',
+    'is_active' => true
+]);
 ```
 
 <a name="expect-toMatchArray"></a>
